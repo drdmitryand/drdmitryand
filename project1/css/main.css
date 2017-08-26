@@ -58,4 +58,9 @@ input:nth-child(2) {
 .per1 a:hover {
     text-decoration: underline;
 }
+@media (min-width: 0px) and (max-width: 990px) {
+    html {
+       font-size: 7px;
+    }
+}
 
