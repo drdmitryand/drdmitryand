@@ -3,7 +3,6 @@ html {
 }
 
 body {
-   margin: 0 auto;   
    font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -14,58 +13,92 @@ a:active, a:visited, a:focus {
 }
 
 .nach {
-   background: #fff url(../img/1.jpg) center center no-repeat;
-   display: table;
-   width: 100%;
-   height: 100vh;
-   position: relative;
-   text-align: center;
-   z-index: 0;
-   color: #fff;
+    background: #000 url(../img/1.jpg) center center no-repeat;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	text-align: center;
+	display: table;
+	color: #fff;
 }
 .nach .nach_1 {
-   display: table-cell;
-   margin: 0 auto;
-   z-index: 1;
-   vertical-align: middle; 
-   background-color: rgba(0,0,0,0.7)
+	margin: 0 auto;
+	display:table-cell;
+	vertical-align:middle;
+	z-index: 1;
+	background-color: rgba(0,0,0,0.5)
 }
 
-.nach h1 {
-   font-size: 8rem;
-   margin-bottom: 1.0rem;
-   font-weight: 500;
-   text-transform: uppercase;
-   margin-top: 2.0rem;
-   margin-bottom: -3rem;
+.nach h6 {
+    font-size: 6rem;
+	margin-bottom: 1.2rem;
+	font-weight: 300;
+	text-transform: uppercase;
 }
-
-.nach .menu {
-	position: absolute;
-    left: 50%;
-    margin-left: -37rem;
-    top: 3rem;
-}
-.nach .menu a{
-    text-decoration: none;
-    margin-left: 10px;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    color: #fff;
-}
-.nach .menu a:hover {
-	color: #fff;
-    text-decoration: underline;
+.nach h6 span {
+   font-size: 5rem;
 }
 
 
+ 
+
+ 
+.itemsMenu  {
+  left: 50%;
+  position: absolute;
+  top: 4rem;
+  margin-left: -34rem;
+}
+.itemsMenu li {
+  display: inline;
+}
+.itemsMenu a{
+  color: #fff;
+  text-decoration: none;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+}
+.itemsMenu a:hover {
+  border-bottom: 4px solid #fff;
+  color: #fff;
+  text-decoration: none;
+}
+.iconMenu {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+.iconMenu img{
+  width: 40px;
+  height: 40px;
+}
+.showitems {
+  display:block !important;
+}
 
 
-@media (min-width: 0px) and (max-width: 990px) {
+
+@media (min-width: 0px) and (max-width: 991px) {
    html {
-      font-size: 6px;
+      font-size: 7px;
    }
-   .menu h1 {
-      font-size: 4rem;
+   .nach h6 {
+      font-size: 3.8rem;
    }
+   .nach h6 span {
+      font-size: 2.8rem;
+   }
+   .iconMenu {
+      display:block;
+  }
+  .itemsMenu {
+      display:none;
+  }
+  .itemsMenu li {
+      display:block;
+      padding:10px 0;
+  }
 }
+
+
+

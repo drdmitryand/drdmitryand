@@ -16,24 +16,41 @@
      <meta property="article:author" content="Дмитрий Лисницкий">
      <link rel="icon" type="image/png" href="img/icon_1.png">
      <link rel="stylesheet" type="text/css" href="css/style.css">
-     
+     <link href="css/bootstrap.min.css" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	 <script>
+	     $(function() {
+              //адаптивное меню
+              $('.iconMenu').click(function() {
+                if($('.itemsMenu').is(':visible')) {
+                   $('.itemsMenu').removeClass('showitems');
+                }
+                else {
+                   $('.itemsMenu').addClass('showitems');
+                }
+              });
+              //
+              
+         });
+	 </script>
   </head>
   <body>
      <div class="nach">
         <div class="nach_1">
-			 <div class="menu">
-                <a href="">Общее</a>
-                <a href="">Узнать о курсе</a>
-                <a href="">Наши предложения</a>
-                <a href="">Бонусы</a>
-                <a href="">Выйти на связь</a>
-                <a href="">О деле в образах</a>
-                <a href="">Мы вокруг</a>
+			<div class="topMenu">
+              <div class="iconMenu"><img src="img/menu.png" alt="Меню" /></div>
+              <div class="itemsMenu">
+                 <li><a href="#">Общее</a></li>
+                 <li><a href="#">О курсе</a></li>
+                 <li><a href="#">Наши предложения</a></li>
+                 <li><a href="#">Бонусы</a></li>
+                 <li><a href="#">Контакты</a></li>
+                 <li><a href="#">О деле в образах</a></li>
+                 <li><a href="#">Мы вокруг</a></li>
+              </div>
             </div>
-            <h1>Автономика</h1>
-            <h1>Забота о развитии</h1>
+            <h6>Автономика<br><span>Забота о развитии</span></h6>
         </div>
      </div>
   </body>
