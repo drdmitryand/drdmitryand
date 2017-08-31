@@ -51,6 +51,7 @@ a:active, a:visited, a:focus {
     margin-left: 10px;
     text-transform: uppercase;
     font-size: 1.3rem;
+    color: #fff;
 }
 .nach .menu a:hover {
 	color: #fff;
@@ -62,9 +63,9 @@ a:active, a:visited, a:focus {
 
 @media (min-width: 0px) and (max-width: 990px) {
    html {
-      font-size: 5px;
+      font-size: 6px;
    }
    .menu h1 {
-      font-size: 3rem;
+      font-size: 4rem;
    }
 }
