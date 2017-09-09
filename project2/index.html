@@ -18,7 +18,9 @@
      <link rel="stylesheet" type="text/css" href="css/style.css">
      <link href="css/bootstrap.min.css" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+     <link rel="stylesheet" media="screen,projection" href="css/ui.totop.css" />
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	 <script src="js/jquery.ui.totop.min.js"></script>
 	 <script>
 	     $(function() {
               //адаптивное меню
@@ -30,6 +32,8 @@
                    $('.itemsMenu').addClass('showitems');
                 }
               });
+              //
+               $('body').UItoTop({scrollSpeed: 700}); //кнопка 'наверх'
               //
               
          });
@@ -52,6 +56,35 @@
             </div>
             <h6>Автономика<br><span>Забота о развитии</span></h6>
         </div>
+     </div>
+     <div class="about">
+         <h6>Автономика это...</h6>
+         <p>&nbsp;&nbsp;Это курс юного ЭКОинженера, где можно научиться проектировать и реализовывать
+         свои идеи от простого к сложному, получить навыки взаимодействия с природой.<br>&nbsp;&nbsp;После реализации проекта идет его испытание в реальных природных условиях, где
+         происходит обучение первичным навыкам жизнеобеспечения в природной среде!</p>
+     </div>
+     <div class="about_1">
+         <div class="a_1">
+             <div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="pp">
+							   <p><i>Практика</i> - <br>критерий истины.<br><i>Природа</i> - <br>лучший учитель.</p>
+						    </div>
+						</div>
+						<div class="col-md-4">
+							<div class="pp">
+							   <p>Главный принцип:<br>Сделал<br>-Испытал-<br>Сам использую</p>
+						    </div>
+						</div>
+						<div class="col-md-4">
+							<div class="pp">
+							    <p>Изучение ><br>Лабаратория ><br>Испытание в природных <br>условиях</p>
+						    </div>
+						</div>
+					</div>
+				</div>
+         </div>
      </div>
   </body>
 </html>
