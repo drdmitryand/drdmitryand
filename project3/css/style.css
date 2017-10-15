@@ -423,11 +423,14 @@ border-bottom: 1px solid transparent;
       overflow-x: hidden;
    }
    .nach h6 {
-      font-size: 3rem;
+      font-size: 3.8rem;
    }
    .nach h6 span {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
    }
+   .about h6 {
+	 font-size: 3rem;  
+	}
 .predl {
   z-index: 4;
 }
