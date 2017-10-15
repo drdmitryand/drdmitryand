@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>
+	    Выезды, походы, экспедиции
+	 </title>
+	 <meta charset="utf-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	 <link rel="icon" href="favicon.ico" type="image/x-icon" />
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	 <link rel="stylesheet" href="css/albom.css">
+	 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	 <script type="text/javascript">
+         $(document).ready(function() {
+            var preload = document.createElement('div');
+            preload.className = "preloader";
+            preload.innerHTML = '<div class="b-ico-preloader"></div><div class="spinner"></div>';
+            document.body.appendChild(preload);
+            window.addEventListener('load', function() {
+                  preload.className +=  ' fade';
+                  setTimeout(function(){
+                          preload.style.display = 'none';
+                  },600);
+            })
+			
+			////
+			
+			$('img').click(function(){
+			     $('.cb').hide();
+				 $('.lightbox').click(function(){
+			       $('.cb').show();
+			     });
+			});
+         });
+     </script>
+  </head>
+  <body> 
+  
+      <div class="cb"> 
+	     <a href="index.html">Назад</a>
+	  </div>
+	  
+	  
+	  
+      <input type="checkbox" id="pic-1"/>
+      <label for="pic-1" class="lightbox"><img src="img/poh.jpg"/></label>
+      <input type="checkbox" id="pic-2"/>
+      <label for="pic-2" class="lightbox"><img src="img/poh.jpg"/></label>
+      <input type="checkbox" id="pic-3"/>
+      <label for="pic-3" class="lightbox"><img src="img/poh.jpg"/></label>
+      <input type="checkbox" id="pic-4"/>
+      <label for="pic-4" class="lightbox"><img src="img/poh.jpg"/></label>
+      
+ 
+      <div class="grid">
+          <label for="pic-1" class="grid-item"><img src="img/poh.jpg"/></label>
+          <label for="pic-2" class="grid-item"><img src="img/poh.jpg"/></label>
+          <label for="pic-3" class="grid-item"><img src="img/poh.jpg"/></label>
+          <label for="pic-4" class="grid-item"><img src="img/poh.jpg"/></label>
+      </div>
+  </body>
+</html>

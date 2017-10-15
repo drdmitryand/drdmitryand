@@ -14,14 +14,20 @@
      <meta property="og:description" content="Запишись в наш кружок!">
      <meta property="og:site_name" content="Обучение выживанию">
      <meta property="article:author" content="Дмитрий Лисницкий">
-     <link rel="icon" type="image/png" href="img/icon_1.png">
+     <link rel="stylesheet" href="css/fontello.css">
+     <link rel="stylesheet" href="css/fontello-embedded.css">
+     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
      <link rel="stylesheet" type="text/css" href="css/style.css">
      <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="css/animate.css" />
      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
      <link rel="stylesheet" media="screen,projection" href="css/ui.totop.css" />
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	 <script src="js/jquery.ui.totop.min.js"></script>
-	 <script>
+	 <script src="js/bootstrap.min.js"></script>
+	 <script src="js/wow.min.js"></script>
+     <script>
 	     $(function() {
               //адаптивное меню
               $('.iconMenu').click(function() {
@@ -32,10 +38,25 @@
                    $('.itemsMenu').addClass('showitems');
                 }
               });
-              //
+              ////
                $('body').UItoTop({scrollSpeed: 700}); //кнопка 'наверх'
+              // прелоадер
+              var preload = document.createElement('div');
+              preload.className = "preloader";
+              preload.innerHTML = '<div class="b-ico-preloader"></div><div class="spinner"></div>';
+              document.body.appendChild(preload);
+              window.addEventListener('load', function() {
+                    preload.className +=  ' fade';
+                    setTimeout(function(){
+                            preload.style.display = 'none';
+                    },600);
+              });
               //
-              
+              //анимация
+              var wow = new WOW({
+			    mobile: false
+			  });
+              wow.init();
          });
 	 </script>
   </head>
@@ -45,21 +66,19 @@
 			<div class="topMenu">
               <div class="iconMenu"><img src="img/menu.png" alt="Меню" /></div>
               <div class="itemsMenu">
-                 <li><a href="#">Общее</a></li>
-                 <li><a href="#">О курсе</a></li>
-                 <li><a href="#">Наши предложения</a></li>
-                 <li><a href="#">Бонусы</a></li>
-                 <li><a href="#">Контакты</a></li>
-                 <li><a href="#">О деле в образах</a></li>
-                 <li><a href="#">Мы вокруг</a></li>
+                 <li><a href="#about">Общее</a></li>
+                 <li><a href="#nap">О курсе</a></li>
+                 <li><a href="#predl">Наши предложения</a></li>
+                 <li><a href="#sviz">Контакты</a></li>
+                 <li><a href="#odel">О деле в образах</a></li>
               </div>
             </div>
-            <h6>Автономика<br><span>Забота о развитии</span></h6>
+            <h6 class="wow bounceInDown">Автономика<br><span>Забота о развитии</span></h6>
         </div>
      </div>
-     <div class="about">
-         <h6>Автономика это...</h6>
-         <p>&nbsp;&nbsp;Это курс юного ЭКОинженера, где можно научиться проектировать и реализовывать
+     <div class="about" id="about">
+         <h6 class="wow bounceInLeft">Автономика это...</h6>
+         <p class="wow bounceInLeft">&nbsp;&nbsp;Это курс юного ЭКОинженера, где можно научиться проектировать и реализовывать
          свои идеи от простого к сложному, получить навыки взаимодействия с природой.<br>&nbsp;&nbsp;После реализации проекта идет его испытание в реальных природных условиях, где
          происходит обучение первичным навыкам жизнеобеспечения в природной среде!</p>
      </div>
@@ -68,23 +87,299 @@
              <div class="container">
 					<div class="row">
 						<div class="col-md-4">
-							<div class="pp">
-							   <p><i>Практика</i> - <br>критерий истины.<br><i>Природа</i> - <br>лучший учитель.</p>
+							<div class="pp wow bounceInLeft">
+							   <p class="wow bounceInLeft"><i>Практика</i> - <br>критерий истины.<br><i>Природа</i> - <br>лучший учитель.</p>
 						    </div>
 						</div>
 						<div class="col-md-4">
-							<div class="pp">
-							   <p>Главный принцип:<br>Сделал<br>-Испытал-<br>Сам использую</p>
+							<div class="pp wow bounceInDown">
+							   <p class="wow bounceInDown">Главный принцип:<br>Сделал<br>-Испытал-<br>Сам использую</p>
 						    </div>
 						</div>
 						<div class="col-md-4">
-							<div class="pp">
-							    <p>Изучение ><br>Лабаратория ><br>Испытание в природных <br>условиях</p>
+							<div class="pp wow bounceInRight">
+							    <p class="wow bounceInRight">Изучение ><br>Лабаратория ><br>Испытание в природных <br>условиях</p>
 						    </div>
 						</div>
 					</div>
 				</div>
          </div>
      </div>
+     <div class="nap" id="nap">
+          <div class="container">
+			    <h1 class="wow bounceInRight">Направления реализации проектов</h1>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="p_1 wow bounceInRight" data-toggle="modal" data-work='work-1' href="#work">
+							    <img src="img/kr.png">
+							    <p>Генерация электричества</p>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="p_1 wow bounceInRight" data-toggle="modal" data-work='work-2' href="#work2">
+							    <img src="img/gen.png">
+							    <p>Получение тепла</p>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="p_1 wow bounceInRigth" data-toggle="modal" data-work='work-3' href="#work3">
+							    <img src="img/fon.png">
+							    <p>Организация освещения</p>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="p_1 wow bounceInRight" data-toggle="modal" data-work='work-4' href="#work4">
+							    <img src="img/com.png">
+							    <p>Безопасность и контроль</p>
+							</div>
+						</div>
+				  </div>
+		 </div>
+     </div>
+     <div class="predl" id="predl">
+          <div class="container">
+			    <h1 class="wow bounceInLeft">Наши предложения</h1>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="p_2 wow bounceInLeft" data-toggle="modal" data-work='work-5' href="#work5">
+							    <img src="img/dip.png">
+							    <p>Пакет</p>
+							    <p>"Мастер класс"</p>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="p_2 wow bounceInLeft" data-toggle="modal" data-work='work-6' href="#work6">
+							    <img src="img/dip.png">
+							    <p>Пакет</p>
+							    <p>"Одно Направление"</p>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="p_2 wow bounceInLeft" data-toggle="modal" data-work='work-7' href="#work7">
+							    <img src="img/dip.png">
+							    <p>Пакет</p>
+							    <p>"Сделай сам - </p>
+							    <p>собери себя в поход"</p>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="p_2 wow bounceInLeft" data-toggle="modal" data-work='work-8' href="#work8">
+							    <img src="img/dip.png">
+							    <p>Пакет</p>
+							    <p>"Научный тур"</p>
+							</div>
+						</div>
+				  </div>
+		 </div>
+     </div>
+     <div class="sviz" id="sviz">
+         <div class="container">
+			    <h1 class="wow bounceInDown">Выйти на связь</h1>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="p_3 wow bounceInLeft">
+							    <img src="img/dim.jpg">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="p_3 wow bounceInRight">
+							    <p>Лисницкий Дмитрий</p>
+							    <p>Основатель курса <br> АВТОНОМИКА <br> <i class="icon-mobile"></i> +7(911)739-05-52<br> <a href="#"><i class="icon-vk"></i></a> <a href=""><i class="icon-inst"></i></a> <a href=""><i class="icon-twitter"></i></a> </p>
+							    <div class="but">
+									<a data-toggle="modal" data-work='work-9' href="#work9">Подробнее</a>
+								</div>
+							</div>
+						</div>
+				  </div>
+		 </div>
+     </div>
+     <div class="odel" id="odel">
+         <div class="container">
+			    <h1 class="wow bounceInDown">О деле в образах</h1>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="p_4 wow bounceInLeft">
+							  <a  href="work.html" class="pq">
+							     <img src="img/work.jpg" alt="Работы"> 
+							     <a href="work.html" class="pb">Наши работы</a>
+							  </a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="p_4 wow bounceInDown">
+							    <a href="viezd.html" class="pq">
+							       <img src="img/poh.jpg" alt="Выезды"> 
+							       <a href="viezd.html" class="pb">Выезды, походы, экспедиции</a>
+							    </a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="p_4 wow bounceInRight">
+							    <a href="polwork.html" class="pq">
+							       <img src="img/pol.jpg" alt="Полевая работа"> 
+							       <a href="polwork.html" class="pb">Полевая работа</a>
+							    </a>
+							</div>
+						</div>
+				  </div>
+		 </div>
+     </div>
+     <div class="footer">
+          <div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="p_5">
+							    <p>Кружок Автономики<br>Руководитель: Лисницкий Дмитрий Петрович</p>
+							    
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="p_5">
+							    <p><a href=""><i class="icon-twitter"></i></a><a href=""><i class="icon-vk"></i></a><a href=""><i class="icon-inst"></i></a><br>Адрес: Санкт-Петербург<br><i class="icon-post">*****@gmail.com</i></p>
+							    
+							</div>
+						</div>
+				  </div>
+		 </div>
+     </div>
+     
+     <!-- Всплывающие окна -->
+			<!--1 модалка-->
+			<div class="modal fade" id="work" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Генерация электричества</h4>
+			      </div>
+			      <div class="modal-body">
+			          <p>Здесь можно собрать своими руками различные виды простейших гальванических элементов (батарей), а также потренироваться в сборке микрогидроэлектростанций, микроветриков, термоэлектрических преобразователей, накопителей энергии (powerbank).</p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!--2 модалка-->
+			<div class="modal fade" id="work2" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Получение тепла</h4>
+			      </div>
+			      <div class="modal-body">
+			           <p>Не обязательно покупать дорогостоящие тепловые приборы, если простейшие из них можно сделать своими руками. Различные виды горелок, в помощью которых можно согреть пищу; грелок, которые согреют нас в лютый мороз; печек, дающие возможность совмещать несколько функций: обогрев, генерация электричества, приготовление пищи.</p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+           <!--3 модалка-->
+           <div class="modal fade" id="work3" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Организация освещения</h4>
+			      </div>
+			      <div class="modal-body">
+			          <p>Как сделать простейший фонарик из подручных средств? Этому можно научиться у нас. Учимся делать ручные и налобные фонарики, изготавливаем различного вида светильники и прожектора.</p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!--4 модалка-->
+           <div class="modal fade" id="work4" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Безопасность и контроль</h4>
+			      </div>
+			      <div class="modal-body">
+			          <p>Здесь мы получаем все навыки и учимся делать устройства для обеспечения безопасного пребывания на природе:
+                         <i><br> &nbsp;&nbsp;&nbsp;- простейшие устройства навигации;
+                          <br> &nbsp;&nbsp;&nbsp;- сигнализации;
+                          <br> &nbsp;&nbsp;&nbsp;- датчики по контролю за параметрами окружающей среды;
+                          <br> &nbsp;&nbsp;&nbsp;- средства связи;
+                          <br> &nbsp;&nbsp;&nbsp;- туристские навыки (преодоление естественных препятствий, разведение костра в любых условиях, обустройство лагеря, приготовление пищи в полевых условиях);
+                      <br> &nbsp;&nbsp;&nbsp;- краеведение.</i></p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		  <!--5 модалка-->
+           <div class="modal fade" id="work5" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Пакет «Мастер-класс»</h4>
+			      </div>
+			      <div class="modal-body">
+			          <p>Изготовим за одно занятие любое простейшее устройство на выбор из четырех направлений (электричество, тепло, свет, безопасность).
+                      <br><br><i>Продолжительность: 1 занятие, 1 час.</i></p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		  <!--6 модалка-->
+           <div class="modal fade" id="work6" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Пакет «Одно направление»</h4>
+			      </div>
+			      <div class="modal-body">
+			          <p>Создаются несколько устройств по одному выбранному направлению (электричество, тепло, свет, безопасность)
+                      + два тренировочных выезда в Ленобласть.
+                      <br><br><i>Продолжительность: 6 занятий по 1,5 часа + 2 выезда по 6 часов.</i></p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		  <!--7 модалка-->
+           <div class="modal fade" id="work7" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Пакет «Сделай сам – собери себя в поход»</h4>
+			      </div>
+			      <div class="modal-body">
+			          <p>Самостоятельное изготовление элементов походного снаряжения и устройств для обеспечения жизнедеятельности из всех направлений (фонарик, powerbank, печка-щепочница (грелка, горелка), сигнализация).
+                      <br><br><i>Продолжительность: 12 занятий по 1,5 часа + Поход выходного дня.</i></p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		  <!--8 модалка-->
+           <div class="modal fade" id="work8" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Пакет «Научные туры»</h4>
+			      </div>
+			      <div class="modal-body">
+			          <p>Организация полевых лабораторий, исследований, экспериментов в рамках экспедиций, научных троп, квестов. </p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		 <!--9 модалка-->
+           <div class="modal fade" id="work9" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Раздел «Выйти на связь»</h4>
+			      </div>
+			      <div class="modal-body">
+			          <p>Педагог дополнительного образования со стажем преподавания детям более 5 лет основ технического творчества, туризма и краеведения. Разработал уникальную дополнительную образовательную программу «Автономика», которая прошла испытание в нескольких государственных учреждениях дополнительного образования. Обучающие дети по этой программе явлюятся участниками и победителями конкурсов, выставок и конференций  уровня субъекта РФ г. Санкт-Петербург. Является участником и организатором множества детских спортивных походов и исследовательских экспедиций в различных уголках России и за ее пределами.
+                      Команда курсов состоит из специалистов различных сфер: медиатехнологии, программирование, робототехника, электроника, туризм и спорт и др. Все специалисты имеют богатый педагогический опыт работы с детьми, как в государственных, так и в частных образовательных учреждениях. </p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
   </body>
 </html>
