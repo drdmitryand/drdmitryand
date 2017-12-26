@@ -15,13 +15,19 @@ a:active, a:visited, a:focus {
 }
 
 .nach {
-    background: #fff url(../img/1.jpg) center center no-repeat;
+   /* background: #fff url(../img/11.jpg) center center no-repeat;*/
 	width: 100%;
-	height: 100vh;
+	height: 50vh;
 	position: relative;
 	text-align: center;
 	display: table;
-	color: #fff;
+	 max-width:100%;
+z-index: 2;
+}
+.nach img {
+width: 100%;
+	height: 50vh;
+z-index: 0;
 }
 .nach .nach_1 {
 	margin: 0 auto;
@@ -40,7 +46,7 @@ a:active, a:visited, a:focus {
 .nach span {
      font-size: 4.5rem;
 }
-.nach .down{
+/*.nach .down{
     position: absolute;
 	color: #fff;
 	z-index: 4;
@@ -59,10 +65,10 @@ a:active, a:visited, a:focus {
 .nach .down:hover {
     color: #fff;
 	border-color: #fff;
-}
+}*/
 
 .about {
-  margin-top: 7rem;
+  margin-top: 2rem;
   display: table;
   position: relative;
   width: 100%;
@@ -85,7 +91,7 @@ a:active, a:visited, a:focus {
     text-align: center;
 }
 .about .col-md-4 {
-    margin-top: -2rem;
+    margin-top: -1rem;
 }
 
  
@@ -137,7 +143,7 @@ a:active, a:visited, a:focus {
 
 
 
-.foto {
+/*.foto {
     margin-top: 7rem;
     background-color: #fff;
     width: 100%;
@@ -176,10 +182,10 @@ a:active, a:visited, a:focus {
 }
 .foto .col-md-6 {
    margin-bottom: 1rem;
-}
+}*/
 
 .footer {
-    margin-top: 7rem;
+    margin-top: 0rem;
     background-color: #242424;
     width: 100%;
     position: relative;
