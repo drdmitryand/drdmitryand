@@ -1,0 +1,69 @@
+html {
+   font-size: 10px;
+   overflow-x: hidden;
+}
+
+body {
+   margin: 0 auto;
+   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.a {
+   	width: 100%;
+	height: 100vh;
+	position: relative;
+	text-align: center;
+	display: table;
+	max-width:100%;
+    margin: 0 auto; 
+    z-index: 2;
+}
+
+.a .a1 {
+	margin: 0 auto;
+	display:table-cell;
+	vertical-align:middle;
+	z-index: 1;
+    height: 100vh;
+}
+.a .a1 p{
+    font-size: 2rem;
+}
+
+#as {
+	position: absolute;
+	color: #000;
+	z-index: 4;
+	bottom: 2rem;
+	display: inline-block;
+	font-size: 2.5rem;
+	left: 50%;
+	margin-left: -90px;
+}
+#as:hover {
+	color: #646464;
+}
+#as a{
+  margin-top: 2rem;
+}
+
+#ay {
+  margin-top: 13rem;
+  text-align: center;
+}
+#ay img{
+  max-width: 300px;
+  max-height: 250px;
+}
+#ay p{
+   font-size: 2rem;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+   html {
+      font-size: 8px;
+   }
+   #as{
+     margin-left: -58px;
+}
+}
