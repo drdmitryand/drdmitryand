@@ -61,7 +61,7 @@ body {
 
 @media (min-width: 0px) and (max-width: 991px) {
    html {
-      font-size: 8px;
+      font-size: 10px;
    }
    #as{
      margin-left: -58px;
