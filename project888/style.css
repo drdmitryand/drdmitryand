@@ -36,9 +36,10 @@ body {
 	z-index: 4;
 	bottom: 2rem;
 	display: inline-block;
-	font-size: 2.5rem;
+	font-size: 5rem;
 	left: 50%;
 	margin-left: -90px;
+	margin-bottom: 5rem;
 }
 #as:hover {
 	color: #646464;
