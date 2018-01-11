@@ -27,44 +27,19 @@ body {
     height: 100vh;
 }
 .a .a1 p{
-    font-size: 4rem;
+    font-size: 2rem;
 }
-
-#as {
-	position: absolute;
-	color: #000;
-	z-index: 4;
-	bottom: 2rem;
-	display: inline-block;
-	font-size: 5rem;
-	left: 50%;
-	margin-left: -140px;
-	margin-bottom: 5rem;
-}
-#as:hover {
-	color: #646464;
-}
-#as a{
-  margin-top: 2rem;
-}
-
-#ay {
-  margin-top: 13rem;
-  text-align: center;
-}
-#ay img{
-  max-width: 300px;
-  max-height: 250px;
-}
-#ay p{
-   font-size: 2rem;
+.a .a1 img {
+  max-width: 600px;
+  max-height: 450px;
 }
 
 @media (min-width: 0px) and (max-width: 991px) {
    html {
-      font-size: 10px;
+      font-size: 8px;
    }
-   #as{
-     margin-left: -45px;
-}
+   img {
+     max-width: 500px;
+  max-height: 350px;
+   }
 }
