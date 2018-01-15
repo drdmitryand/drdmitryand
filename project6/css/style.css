@@ -21,24 +21,27 @@ a:active, a:visited, a:focus {
 	position: relative;
 	text-align: center;
 	display: table;
-	 max-width:100%;
-margin: 0 auto; 
-z-index: 2;
+	max-width:100%;
+    margin: 0 auto; 
+    z-index: 2;
 }
 .nach img {
 width: 100%;
 	height: 50vh;
 z-index: 0;
-
 }
 .nach .nach_1 {
 	margin: 0 auto;
 	display:table-cell;
 	vertical-align:middle;
 	z-index: 1;
-	background-color: rgba(0,0,0,0.5)
+    height: 100vh;
+	background-color: rgba(0,0,0,0)
 }
-
+.nach h6 {
+    font-size: 4.2rem;
+    margin-top: 2rem;
+}
 .nach h1 {
     font-size: 6rem;
 	margin-bottom: 2rem;
@@ -48,9 +51,32 @@ z-index: 0;
 .nach span {
      font-size: 4.5rem;
 }
+.nach-down {
+	position: absolute;
+	color: #000;
+	z-index: 4;
+	bottom: 2rem;
+	display: inline-block;
+	font-size: 2.5rem;
+	width: 63px;
+	height: 63px;
+	border-radius: 50%;
+	border: 2px solid transparent;
+	line-height: 60px;
+	left: 50%;
+	margin-left: -25px;
+	transition: 0.2s;
+}
+.nach-down i{
+    color: #000;
+}
+.nach-down:hover {
+	color: #646464;
+	border-color: #000;
+}
 
 .about {
-  margin-top: 2rem;
+  margin-top: 0rem;
   display: table;
   position: relative;
   width: 100%;
@@ -61,9 +87,12 @@ z-index: 0;
    display: table-cell;
 }
 .about p {
-  font-size: 2.3rem;
+  font-size: 2.0rem;
   margin-top: -3.5rem;
   text-align: justify;
+}
+.about p span {
+  font-size: 1.5rem;
 }
 .about h1{
     text-transform: uppercase;
@@ -72,6 +101,10 @@ z-index: 0;
 	margin-bottom: 6rem;
     text-align: center;
 }
+.about img {
+    max-width: 550px;
+    max-height: 350px;
+}
 .about .col-md-4 {
     margin-top: -1rem;
 }
@@ -79,7 +112,7 @@ z-index: 0;
  
 .perech {
     margin-top: 7rem;
-    background-color: #E3E30B;
+    background-color: #f68527;
     color: #fff;
     width: 100%;
     position: relative;
@@ -189,6 +222,10 @@ z-index: 0;
    .footer .col-md-4:nth-child(3) p{
       font-size: 2.2rem;
    }
+   #work2 img[tabindex="0"]:focus {
+       max-width: 350px;
+       max-height: 300px;
+   }
 }
 
 /*Модалки*/
@@ -212,6 +249,13 @@ z-index: 0;
     font-size: 2rem;
 }
 #work2 .modal-body p{
+     font-size: 2rem;
+}
+#work .modal-body img {
+    max-width: 200px;
+    max-height: 200px;
+}
+#work .modal-body p{
      font-size: 2rem;
 }
 /**/
@@ -278,4 +322,27 @@ z-index: 0;
   }
 }
 /* */
+
+#work2 img[tabindex="0"] {
+  cursor: zoom-in;
+}
+#work2 img[tabindex="0"]:focus {
+  position: fixed;
+  z-index: 10;
+  top: 14rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /*width: 500px;
+  height: 500px;*/
+  width: 688px;
+  height: 454px;
+  margin: auto;
+  box-shadow: 0 0 20px #000, 0 0 0 1000px rgba(210,210,210,.4);
+}
+#work2 img[tabindex="0"]:focus,  /* убрать строку, если не нужно, чтобы при клике на увеличенное фото, оно возвращалось в исходное состояние */
+#work2 img[tabindex="0"]:focus ~ * {
+  pointer-events: none;
+  cursor: zoom-out;
+}
 
