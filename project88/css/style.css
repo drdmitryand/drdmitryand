@@ -93,8 +93,11 @@ width: 100%;
 	html {
 		font-size: 6px;
 	}
+    .nach a {
+	 font-size: 4rem;   
+	}
     .vt p {
-    font-size: 3rem;
+    font-size: 2rem;
     }
     .foto img {
       width: 30rem;
