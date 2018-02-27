@@ -97,12 +97,14 @@ width: 100%;
 	 font-size: 4rem;
 	 border: 0.5rem solid #0D0BFF;
 	}
+    .vt {
+	margin-bottom: 2rem;
+}
     .vt p {
     font-size: 2rem;
     }
 	.vt a {
 		 font-size: 4rem;
-		padding-bottom: 2rem;
 	}
     .foto img {
       width: 30rem;
