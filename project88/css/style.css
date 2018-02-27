@@ -94,11 +94,15 @@ width: 100%;
 		font-size: 6px;
 	}
     .nach a {
-	 font-size: 4rem;   
+	 font-size: 4rem;
+	    border: 0.5rem;
 	}
     .vt p {
     font-size: 2rem;
     }
+	.vt a {
+		 font-size: 4rem;
+	}
     .foto img {
       width: 30rem;
       padding: 1rem;
