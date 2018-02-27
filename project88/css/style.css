@@ -103,8 +103,9 @@ width: 100%;
     .vt p {
     font-size: 2rem;
     }
-	.vt a {
-		 font-size: 4rem;
+	.vt_1 a {
+		 font-size: 3rem;
+		margin-bottom: 2rem;
 	}
     .foto img {
       width: 30rem;
