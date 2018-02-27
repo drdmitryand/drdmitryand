@@ -1,0 +1,99 @@
+body {
+    margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+}
+html {
+	font-size: 10px;
+}
+.nach {
+    background: #fff url(../img/1.jpg) center center no-repeat;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	text-align: center;
+	display: table;
+    color: #fff;
+}
+.nach .nach_1 {
+	margin: 0 auto;
+	display:table-cell;
+	vertical-align:middle;
+	z-index: 1;
+    background-color: rgba(255,255,255,0.7);
+}
+.nach_1 a{
+    font-size: 8rem;
+    text-decoration: none;
+    border: 1rem solid #0D0BFF;
+    color: #0D0BFF;
+    border-radius: 50px;
+    padding: 1.3rem;
+}
+.nach_1 a:hover {
+    background-color: #0D0BFF;
+    color: #fff;
+    text-decoration: none;
+}
+
+.vt {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	text-align: center;
+	display: table;
+    background-color: #0D81FF;
+ 
+}
+.vt .vt_1 {
+	margin: 0 auto;
+	display:table-cell;
+	vertical-align:middle;
+	z-index: 1;
+}
+.vt p{
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Caveat', cursive;
+    padding: 2rem;
+}
+.vt_1 a{
+    font-size: 4rem;
+    text-decoration: none;
+    border: 0.3rem solid #fff;
+    color: #fff;
+    border-radius: 50px;
+    padding: 1.3rem;
+}
+.vt_1 a:hover {
+    border: 0rem;
+    text-decoration: underline;
+}
+.foto {
+    margin-top: 10rem;  
+    text-align: center;
+}
+
+.foto img {
+    width: 23rem;
+    padding: 1rem;
+}
+
+.fot {
+   text-align: center;
+   margin-top: 1.5rem;
+   font-size: 2rem;
+   font-family: 'Caveat', cursive;
+}
+
+@media (min-width: 0px) and (max-width: 990px) {
+	html {
+		font-size: 6px;
+	}
+    .vt p {
+    font-size: 3rem;
+    }
+    .foto img {
+      width: 30rem;
+      padding: 1rem;
+     }
+}
